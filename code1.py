@@ -25,6 +25,23 @@ class Solution:
         return False
 
 
+class Solution1:
+    def Find(self, target, array):
+        n_row = len(array)
+        m_col = len(array[0])
+        i = n_row -1
+        j = 0
+        while i >= 0 and j <= m_col -1:
+            if array[i][j] <target:
+                j += 1
+            elif array[i][j] > target:
+                i -= 1
+            else:
+                return True
+
+        return False
+
+
 '''
 另外一种思路是：
 利用二维数组由上到下，由左到右递增的规律，
@@ -35,21 +52,7 @@ class Solution:
 即row++；
 '''
 
-class Solution1:
-    def Find(self, target, array):
-        n_row = len(array)
-        m_col = len(array[0])
-        i = n_row -1
-        j = 0
-        while i >= 0 and j <= m_col -1:
-        	if array[i][j] <target:
-        		j += 1
-        	elif array[i][j] > target:
-        		i -= 1
-        	else:
-        		return True
 
-        return False
 
 
 
