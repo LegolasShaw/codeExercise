@@ -50,11 +50,6 @@ class Solution1:
                 return True
 
         return False
-master
-dev
-master1 asdasdasd
-master1 im atat
-
 
 
 

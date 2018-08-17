@@ -19,3 +19,18 @@ class Solution:
             returnlist.insert(0, listNode.val)
             listNode = listNode.next
         return returnlist
+
+#简易堆栈解法
+class Solution:
+    # 返回从尾部到头部的列表值序列，例如[1,2,3]
+    def printListFromTailToHead(self, listNode):
+        stack = []
+        returnlist = []
+        if listNode is None:
+            return stack
+        while listNode is not None:
+            stack.append(listNode.val)
+            listNode = listNode.next
+        while len(stack)> 0 :
+            returnlist.append(stack.pop())
+        return returnlist        
