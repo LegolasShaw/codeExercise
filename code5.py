@@ -23,6 +23,5 @@ class Solution:
 			i += 1
 		return  reslut
 
-
 xx = Solution()
 print(xx.Fibonacci(3))
