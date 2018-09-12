@@ -11,13 +11,19 @@ def func(msg):
         print(msg)
         time.sleep(5)
 
-msg = 'i am child process'
+msg = 'i am child process 1'
 
+
+msg2 = 'i am child process 2'
 app = Flask(__name__)
 pid = os.fork()
 
 if pid == 0:
     func(msg)
+
+pid = os.fork()
+if pid == 0:
+    func(msg2)
 
 
 
